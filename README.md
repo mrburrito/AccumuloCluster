@@ -8,9 +8,9 @@ Follow these steps in order to get Accumulo Vagrant cluster up and running
   (b) Hadoop: Download from my repo: https://drive.google.com/open?id=0B3j5JFecmkYudDh1bWtaY2lNOVU&authuser=0
   (c) Accumulo: Download from my repo: https://drive.google.com/open?id=0B3j5JFecmkYuOGpDZVRVckprbVk&authuser=0
   (d) Zookeeper: Download from my repo: https://drive.google.com/open?id=0B3j5JFecmkYuWlNWSUlxNDMtNEU&authuser=0
-(3) [ON HOST] Copy downloaded hadoop, accumulo, and zookeeper downloaded files to the top-level "*.../share*" folder
-(4) [ON HOST] Change directory to the top-level folder (cloned folder .../vagrantAccumuloCluster)
-(5) [ON HOST] Copy the vagrant box (acluster.box) in the "vms" folder in the top-level directory (e.g., cp ~/Downloads/downloaded.box /vagrantAccumuloCluster/vms)
+(3) [ON HOST] Copy downloaded hadoop, accumulo, and zookeeper downloaded files to the top-level "AccumuloCluster/share" folder
+(4) [ON HOST] Change directory to the top-level folder (cloned folder .../AccumuloCluster)
+(5) [ON HOST] Copy the vagrant box (acluster.box) in the "vms" folder in the top-level directory (e.g., cp ~/Downloads/downloaded.box /AccumuloCluster/vms)
 (6) [ON HOST] Type "vagrant up" to bring up cluster nodes (1.5GB RAM/node)
 (7) Place the following in the hosts file:
 	- "localhosts 127.0.0.1
@@ -22,6 +22,7 @@ Follow these steps in order to get Accumulo Vagrant cluster up and running
      On Windows machines: "C:\Windows\System32\Drivers\etc\hosts"
      On Linux machines: "/etc/hosts
 (8) [ON HOST] Type "vagrant ssh mnode" to log into master node (mnode)
+    ''Note: Windows caused some issues with Vagrant. Take a look at article for more information: http://www.robertpate.net/blog/2013/getting-the-vagrant-ssh-command-to-work-on-windows/''
 (9) [IN VAGRANT VM] Type "cd /vagrant"
 (10) [IN VAGRANT VM] Type "./security.sh" to update known_hosts file for other nodes
 (11) [IN VAGRANT VM] Type "./initCluster.sh" to initialize and start cluster. Please note the cluster names/passwords for Accumulo.
