@@ -2,20 +2,29 @@
 This repo contains the scripts and files needed in order provision an Accumulo cluster.
 Follow these steps in order to get Accumulo Vagrant cluster up and running
 ```
-(1) Clone [repo](git clone https://github.com/wjfrelo/vagrantAccumuloCluster.git) or download zip [file](https://github.com/wjfrelo/vagrantAccumuloCluster/archive/master.zip)
-(2) Download the following files:
-  (a) [Vagrant box](https://drive.google.com/file/d/0B3j5JFecmkYuZ0RZMmJfbnBVbGs/view?usp=sharing) or type: wget "https://drive.google.com/file/d/0B3j5JFecmkYuZ0RZMmJfbnBVbGs/view?usp=sharing" in the commandline.
-  (b) Download hadoop from my [repo](https://drive.google.com/file/d/0B3j5JFecmkYudDh1bWtaY2lNOVU/view?usp=sharing).
-  (c) Download accumulo from my [repo](https://drive.google.com/file/d/0B3j5JFecmkYuOGpDZVRVckprbVk/view?usp=sharing).
-  (d) Download zookeeper from my [repo](https://drive.google.com/file/d/0B3j5JFecmkYuWlNWSUlxNDMtNEU/view?usp=sharing).
-(3) Copy downloaded hadoop, accumulo, and zookeeper downloaded files to the top-level "*.../share*" folder
-(4) Change directory to the top-level folder (cloned folder .../vagrantAccumuloCluster)
-(5) Place the vagrant box in the "vms" folder in the top-level directory (e.g., cp ~/Downloads/downloaded.box /vagrantAccumuloCluster/vms)
-(6) Type "vagrant up" to bring up cluster nodes (1.5GB RAM/node)
-(7) Type "vagrant ssh mnode" to log into master node (mnode)
-(8) Type "cd /vagrant"
-(9) Type "./security.sh" to update known_hosts file for other nodes
-(10) Type "./initCluster.sh" to initialize and start cluster. Please note the cluster names/passwords for Accumulo.
+(1) [ON HOST] Clone repo:(git clone https://github.com/wjfrelo/AccumuloCluster.git) or download the zip file (https://github.com/wjfrelo/AccumuloCluster/archive/master.zip) 
+(2) [ON HOST] Download the following files:
+  (a) Vagrant box: https://drive.google.com/open?id=0B3j5JFecmkYuZ0RZMmJfbnBVbGs&authuser=0
+  (b) Hadoop: Download from my repo: https://drive.google.com/open?id=0B3j5JFecmkYudDh1bWtaY2lNOVU&authuser=0
+  (c) Accumulo: Download from my repo: https://drive.google.com/open?id=0B3j5JFecmkYuOGpDZVRVckprbVk&authuser=0
+  (d) Zookeeper: Download from my repo: https://drive.google.com/open?id=0B3j5JFecmkYuWlNWSUlxNDMtNEU&authuser=0
+(3) [ON HOST] Copy downloaded hadoop, accumulo, and zookeeper downloaded files to the top-level "*.../share*" folder
+(4) [ON HOST] Change directory to the top-level folder (cloned folder .../vagrantAccumuloCluster)
+(5) [ON HOST] Copy the vagrant box (acluster.box) in the "vms" folder in the top-level directory (e.g., cp ~/Downloads/downloaded.box /vagrantAccumuloCluster/vms)
+(6) [ON HOST] Type "vagrant up" to bring up cluster nodes (1.5GB RAM/node)
+(7) Place the following in the hosts file:
+	- "localhosts 127.0.0.1
+	- 192.168.15.1 hostnode
+	- 192.168.15.2 mnode
+	- 192.168.15.3 snode1
+	- 192.168.15.4 snode2
+	- 192.168.15.5 snode3"
+     On Windows machines: "C:\Windows\System32\Drivers\etc\hosts"
+     On Linux machines: "/etc/hosts
+(8) [ON HOST] Type "vagrant ssh mnode" to log into master node (mnode)
+(9) [IN VAGRANT VM] Type "cd /vagrant"
+(10) [IN VAGRANT VM] Type "./security.sh" to update known_hosts file for other nodes
+(11) [IN VAGRANT VM] Type "./initCluster.sh" to initialize and start cluster. Please note the cluster names/passwords for Accumulo.
 ```
 # Additional Information
 
