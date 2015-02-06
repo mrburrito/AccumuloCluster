@@ -63,8 +63,11 @@ In order to get into the nodes, type “vagrant ssh mnode” (Logs into the mnod
 ```
 ##Other Useful Commands
 (1) [ON HOST] **vagrant destroy:** Destroy the entire cluster and kill any related processes.
+
 (2) [ON HOST] **vagrant halt:** Gently stops the Vagrant VM's. **WARNING: **Must shutdown cluster prior to using this command.
+
 (3) [IN VAGRANT VM] **/vagrant/startCluster.sh:** Start cluster without re-initializing cluster
+
 (4) [IN VAGRANT VM] **/vagrant/stopCluster.sh:** Gently stop cluster. Run before running the **vagrant halt** command on HOST.
 . 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">DubsAccumulo Vagrant Cluster</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/wjfrelo/vagrantAccumuloCluster" property="cc:attributionName" rel="cc:attributionURL">Wyatt J. Frelot</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/wjfrelo/vagrantAccumuloCluster" rel="dct:source">https://github.com/wjfrelo/vagrantAccumuloCluster</a>.
