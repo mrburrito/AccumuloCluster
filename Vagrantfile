@@ -12,9 +12,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  #  config.vm.box = "ubuntu/trusty64"
+  
   # Every Vagrant virtual environment requires a box to build off of.
-    config.vm.box = "vms/accumuloCluster.box"
+    config.vm.box = "vms/acluster.box"
     config.vm.synced_folder "share/", "/vagrant"
     
     config.vm.provider "virtualbox" do |vb|
