@@ -22,7 +22,7 @@ Follow these steps in order to get Accumulo Vagrant cluster up and running
      On Windows machines: "C:\Windows\System32\Drivers\etc\hosts"
      On Linux machines: "/etc/hosts
 (8) [ON HOST] Type "vagrant ssh mnode" to log into master node (mnode)
-    ''Note: Windows caused some issues with Vagrant. Take a look at article for more information: http://www.robertpate.net/blog/2013/getting-the-vagrant-ssh-command-to-work-on-windows/''
+    *Note: Windows caused some issues with Vagrant. Take a look at article for more information: http://www.robertpate.net/blog/2013/getting-the-vagrant-ssh-command-to-work-on-windows/
 (9) [IN VAGRANT VM] Type "cd /vagrant"
 (10) [IN VAGRANT VM] Type "./security.sh" to update known_hosts file for other nodes
 (11) [IN VAGRANT VM] Type "./initCluster.sh" to initialize and start cluster. Please note the cluster names/passwords for Accumulo.
