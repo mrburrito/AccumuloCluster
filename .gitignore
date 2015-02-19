@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Compiled source #
 ###################
 *.com
@@ -20,13 +19,13 @@
 *.rar
 *.tar
 *.zip
- 
+
 # Logs and databases #
 ######################
 *.log
 *.sql
 *.sqlite
- 
+
 # OS generated files #
 ######################
 .DS_Store
@@ -43,4 +42,3 @@ Thumbs.db
 *.jar
 *.war
 *.ear
->>>>>>> 8f80a0a366b3948e72ba89c08a91c6d88317b517
