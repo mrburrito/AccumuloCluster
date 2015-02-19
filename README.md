@@ -17,15 +17,15 @@ Follow these steps in order to get Accumulo Vagrant cluster up and running.
 2. 	Ensure [VirtualBox](https://virtualbox.org) is downloaded and installed. The Vagrant setup works with VirtualBox
 	out of the box.
 
-3. 	Download the following files:
-	*	[Vagrant Box](https://drive.google.com/open?id=0B3j5JFecmkYuZ0RZMmJfbnBVbGs&authuser=0)
-	*	[Hadoop](https://drive.google.com/open?id=0B3j5JFecmkYudDh1bWtaY2lNOVU&authuser=0)
-	*	[Accumulo](https://drive.google.com/open?id=0B3j5JFecmkYuOGpDZVRVckprbVk&authuser=0)
-	*	[Zookeeper](https://drive.google.com/open?id=0B3j5JFecmkYuWlNWSUlxNDMtNEU&authuser=0)
+3. 	Download the following files from my Google Drive:
+	*	[Vagrant Box](https://docs.google.com/uc?id=0B3j5JFecmkYuZ0RZMmJfbnBVbGs&export=download)
+	*	[Hadoop](https://docs.google.com/uc?id=0B3j5JFecmkYudDh1bWtaY2lNOVU&export=download)
+	*	[Accumulo](https://docs.google.com/uc?id=0B3j5JFecmkYuOGpDZVRVckprbVk&export=download)
+	*	[Zookeeper](https://docs.google.com/uc?id=0B3j5JFecmkYuWlNWSUlxNDMtNEU&export=download)
 
 4.	Copy or move the downloaded Hadoop, Accumulo and Zookeeper files to the `AccumuloCluster/share` folder.
 
-5.	Create the directory `AccumuloCluster/vms` and move the downloaded Vagrant Box (`acluster.box`) to that directory.
+5.	Create the directory `AccumuloCluster/vms` and move the downloaded Vagrant Box (`accumuloCluster.box`) to that directory.
 
 6.	Initialize the cluster nodes (1.5GB RAM/node)
 
@@ -51,7 +51,7 @@ Follow these steps in order to get Accumulo Vagrant cluster up and running.
  	# Commands below issued on mnode VM
 	<mnode>$ cd /vagrant
 	# Updates known_hosts file for other nodes
-	<mnode>$ ./security.sh
+	<mnode>$ sudo ./security.sh
 	# Initializes and starts cluster. Please note the cluster names/passwords for Accumulo.
 	<mnode>$ ./initCluster.sh
 	```
